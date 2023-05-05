@@ -4,6 +4,7 @@ import SearchLocation from "./src/components/SearchLocation";
 import VisitedLocation from "./src/components/VisitedLocation";
 import { visitedLocations } from "./assets/data/data";
 import ServiceSuggestions from "./src/components/ServiceSuggestions";
+import UberAuto from "./src/components/UberAuto";
 
 const Devider = () => {
   return (
@@ -22,6 +23,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <SearchLocation />
+
       <View>
         <FlatList
           data={visitedLocations}
@@ -31,7 +33,10 @@ export default function App() {
           ItemSeparatorComponent={() => <Devider />}
         />
       </View>
+
       <ServiceSuggestions />
+
+      <UberAuto />
       <StatusBar style="auto" />
     </SafeAreaView>
   );

@@ -8,6 +8,7 @@ type ServiceItemProps = {
   id: string;
   serviceImage: string;
   serviceName: string;
+  promoIsAvailable: boolean;
 };
 
 export { VisitedLocationProps, ServiceItemProps };
