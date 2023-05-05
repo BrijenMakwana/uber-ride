@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  FlatList,
+  ScrollView,
+} from "react-native";
 import SearchLocation from "./src/components/SearchLocation";
 import VisitedLocation from "./src/components/VisitedLocation";
 import { visitedLocations } from "./assets/data/data";
@@ -21,24 +27,22 @@ const Devider = () => {
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <SearchLocation />
+    <ScrollView>
+      <SafeAreaView style={styles.container}>
+        <SearchLocation />
 
-      <View>
-        <FlatList
-          data={visitedLocations}
-          renderItem={({ item }) => <VisitedLocation {...item} />}
-          keyExtractor={(visitedLocation) => visitedLocation.id}
-          showsVerticalScrollIndicator={false}
-          ItemSeparatorComponent={() => <Devider />}
-        />
-      </View>
+        <View>
+          {visitedLocations.map((item) => (
+            <VisitedLocation {...item} key={item.id} />
+          ))}
+        </View>
 
-      <ServiceSuggestions />
+        <ServiceSuggestions />
 
-      <UberAuto />
-      <StatusBar style="auto" />
-    </SafeAreaView>
+        <UberAuto />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    </ScrollView>
   );
 }
 
