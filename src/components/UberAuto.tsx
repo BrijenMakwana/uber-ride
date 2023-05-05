@@ -29,7 +29,8 @@ export default UberAuto;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15,
+    paddingHorizontal: 15,
+    marginTop: 5,
   },
   heading: {
     fontSize: 18,
