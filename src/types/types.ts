@@ -4,4 +4,10 @@ type VisitedLocationProps = {
   address: string;
 };
 
-export { VisitedLocationProps };
+type ServiceItemProps = {
+  id: string;
+  serviceImage: string;
+  serviceName: string;
+};
+
+export { VisitedLocationProps, ServiceItemProps };
