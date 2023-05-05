@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
 import SearchLocation from "./src/components/SearchLocation";
 import VisitedLocation from "./src/components/VisitedLocation";
 import { visitedLocations } from "./assets/data/data";
+import ServiceSuggestions from "./src/components/ServiceSuggestions";
 
 const Devider = () => {
   return (
@@ -21,14 +22,16 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <SearchLocation />
-
-      <FlatList
-        data={visitedLocations}
-        renderItem={({ item }) => <VisitedLocation {...item} />}
-        keyExtractor={(visitedLocation) => visitedLocation.id}
-        showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <Devider />}
-      />
+      <View>
+        <FlatList
+          data={visitedLocations}
+          renderItem={({ item }) => <VisitedLocation {...item} />}
+          keyExtractor={(visitedLocation) => visitedLocation.id}
+          showsVerticalScrollIndicator={false}
+          ItemSeparatorComponent={() => <Devider />}
+        />
+      </View>
+      <ServiceSuggestions />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
