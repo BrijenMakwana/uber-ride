@@ -11,4 +11,12 @@ type ServiceItemProps = {
   promoIsAvailable: boolean;
 };
 
-export { VisitedLocationProps, ServiceItemProps };
+type ServiceBannerProps = {
+  id: string;
+  bannerColor: string;
+  heading: string;
+  tagline: string;
+  bannerImage: string;
+};
+
+export { VisitedLocationProps, ServiceItemProps, ServiceBannerProps };

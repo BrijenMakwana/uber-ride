@@ -11,6 +11,7 @@ import VisitedLocation from "./src/components/VisitedLocation";
 import { visitedLocations } from "./assets/data/data";
 import ServiceSuggestions from "./src/components/ServiceSuggestions";
 import UberAuto from "./src/components/UberAuto";
+import ServiceBanners from "./src/components/ServiceBanners";
 
 const Devider = () => {
   return (
@@ -27,7 +28,7 @@ const Devider = () => {
 
 export default function App() {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView style={styles.container}>
         <SearchLocation />
 
@@ -40,6 +41,8 @@ export default function App() {
         <ServiceSuggestions />
 
         <UberAuto />
+
+        <ServiceBanners />
         <StatusBar style="auto" />
       </SafeAreaView>
     </ScrollView>
