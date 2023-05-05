@@ -27,7 +27,7 @@ export default function App() {
         renderItem={({ item }) => <VisitedLocation {...item} />}
         keyExtractor={(visitedLocation) => visitedLocation.id}
         showsVerticalScrollIndicator={false}
-        // ItemSeparatorComponent={<Devider />}
+        ItemSeparatorComponent={() => <Devider />}
       />
       <StatusBar style="auto" />
     </SafeAreaView>
