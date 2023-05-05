@@ -8,6 +8,15 @@ type ServiceItemProps = {
   id: string;
   serviceImage: string;
   serviceName: string;
+  promoIsAvailable: boolean;
 };
 
-export { VisitedLocationProps, ServiceItemProps };
+type ServiceBannerProps = {
+  id: string;
+  bannerColor: string;
+  heading: string;
+  tagline: string;
+  bannerImage: string;
+};
+
+export { VisitedLocationProps, ServiceItemProps, ServiceBannerProps };
