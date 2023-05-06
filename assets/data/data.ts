@@ -89,6 +89,22 @@ const serviceBanners: ServiceBannerProps[] = [
     bannerImage:
       "https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   },
+  {
+    id: "6",
+    bannerColor: "#FFD95A",
+    heading: "no city is too far",
+    tagline: "book intercity",
+    bannerImage:
+      "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+  },
+  {
+    id: "7",
+    bannerColor: "#6C9BCF",
+    heading: "ready?then let's roll.",
+    tagline: "ride with uber",
+    bannerImage:
+      "https://images.unsplash.com/photo-1588829274539-f346ce6dbde0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+  },
 ];
 
 export { visitedLocations, services, serviceBanners };
