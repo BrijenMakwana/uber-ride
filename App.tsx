@@ -1,11 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  FlatList,
-  ScrollView,
-} from "react-native";
+import { SafeAreaView, StyleSheet, View, ScrollView } from "react-native";
 import SearchLocation from "./src/components/SearchLocation";
 import VisitedLocation from "./src/components/VisitedLocation";
 import {
@@ -16,6 +10,8 @@ import {
 import ServiceSuggestions from "./src/components/ServiceSuggestions";
 import ServiceBanners from "./src/components/ServiceBanners";
 import ServiceCards from "./src/components/ServiceCards";
+import PickupTimeModal from "./src/components/PickupTimeModal";
+import { Fragment, useState } from "react";
 
 const Devider = () => {
   return (
@@ -31,15 +27,27 @@ const Devider = () => {
 };
 
 export default function App() {
+  const [pickupTimeModalIsOpen, setPickupTimeModalIsOpen] =
+    useState<boolean>(false);
+
+  const openPickupTimeModal = () => {
+    setPickupTimeModalIsOpen(true);
+  };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView style={styles.container}>
-        <SearchLocation />
+        <SearchLocation openPickupTimeModal={openPickupTimeModal} />
 
         <View>
-          {visitedLocations.map((item) => (
-            <VisitedLocation {...item} key={item.id} />
-          ))}
+          {visitedLocations.map((item, index) => {
+            return (
+              <Fragment key={item.id}>
+                <VisitedLocation {...item} key={item.id} />
+                {index < visitedLocations.length - 1 && <Devider />}
+              </Fragment>
+            );
+          })}
         </View>
 
         <ServiceSuggestions />
@@ -49,6 +57,11 @@ export default function App() {
         <ServiceBanners />
 
         <ServiceCards {...serviceCards2} />
+
+        <PickupTimeModal
+          pickupTimeModalIsOpen={pickupTimeModalIsOpen}
+          setPickupTimeModalIsOpen={setPickupTimeModalIsOpen}
+        />
 
         <StatusBar style="auto" />
       </SafeAreaView>
