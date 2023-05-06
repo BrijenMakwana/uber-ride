@@ -11,6 +11,18 @@ type ServiceItemProps = {
   promoIsAvailable: boolean;
 };
 
+type ServiceCardsProps = {
+  heading: string;
+  serviceCards: ServiceCardProps[];
+};
+
+type ServiceCardProps = {
+  id: string;
+  serviceImage: string;
+  title: string;
+  description: string;
+};
+
 type ServiceBannerProps = {
   id: string;
   bannerColor: string;
@@ -19,4 +31,10 @@ type ServiceBannerProps = {
   bannerImage: string;
 };
 
-export { VisitedLocationProps, ServiceItemProps, ServiceBannerProps };
+export {
+  VisitedLocationProps,
+  ServiceItemProps,
+  ServiceCardsProps,
+  ServiceCardProps,
+  ServiceBannerProps,
+};
