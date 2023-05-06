@@ -37,7 +37,7 @@ type ServiceBannerProps = {
   bannerImage: string;
 };
 
-type PickupTimeModalprops = {
+type PickupTimeModalProps = {
   pickupTimeModalIsOpen: boolean;
   setPickupTimeModalIsOpen: Dispatch<SetStateAction<boolean>>;
 };
@@ -61,5 +61,5 @@ export {
   ServiceBannerProps,
   PickupRuleProps,
   UIButtonProps,
-  PickupTimeModalprops,
+  PickupTimeModalProps,
 };

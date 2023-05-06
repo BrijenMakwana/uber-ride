@@ -9,7 +9,7 @@ import {
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { FC, Fragment, useState } from "react";
 import { pickupRules } from "../../assets/data/data";
-import { PickupRuleProps, PickupTimeModalprops } from "../types/types";
+import { PickupRuleProps, PickupTimeModalProps } from "../types/types";
 import UIButton from "./UIComponents/UIButton";
 
 const PickUpRule: FC<PickupRuleProps> = (props) => {
@@ -22,7 +22,7 @@ const PickUpRule: FC<PickupRuleProps> = (props) => {
   );
 };
 
-const PickupTimeModal: FC<PickupTimeModalprops> = (props) => {
+const PickupTimeModal: FC<PickupTimeModalProps> = (props) => {
   const [matchNewDriver, setMatchNewDriver] = useState<boolean>(true);
   const { pickupTimeModalIsOpen, setPickupTimeModalIsOpen } = props;
 
