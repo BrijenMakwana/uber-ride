@@ -1,6 +1,7 @@
 import {
   VisitedLocationProps,
   ServiceItemProps,
+  ServiceCardsProps,
   ServiceBannerProps,
 } from "../../src/types/types";
 
@@ -47,6 +48,39 @@ const services: ServiceItemProps[] = [
     promoIsAvailable: false,
   },
 ];
+
+const serviceCards1: ServiceCardsProps = {
+  heading: "Ways to save with Uber",
+  serviceCards: [
+    {
+      id: "1",
+      serviceImage:
+        "https://images.unsplash.com/photo-1519687335474-c85fb3a50ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      title: "Auto rides",
+      description: "Upfront fares, doorstep pickups",
+    },
+  ],
+};
+
+const serviceCards2: ServiceCardsProps = {
+  heading: "Ways to plan with Uber",
+  serviceCards: [
+    {
+      id: "1",
+      serviceImage:
+        "https://images.unsplash.com/photo-1537211790624-e6f568af4b13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      title: "Rentals",
+      description: "Ride from 1 to 17 hours",
+    },
+    {
+      id: "2",
+      serviceImage:
+        "https://images.unsplash.com/photo-1605612743100-bc7b808c7965?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      title: "Travel Intercity",
+      description: "Go outstation with ease",
+    },
+  ],
+};
 
 const serviceBanners: ServiceBannerProps[] = [
   {
@@ -107,4 +141,10 @@ const serviceBanners: ServiceBannerProps[] = [
   },
 ];
 
-export { visitedLocations, services, serviceBanners };
+export {
+  visitedLocations,
+  services,
+  serviceCards1,
+  serviceCards2,
+  serviceBanners,
+};

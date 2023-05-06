@@ -8,10 +8,14 @@ import {
 } from "react-native";
 import SearchLocation from "./src/components/SearchLocation";
 import VisitedLocation from "./src/components/VisitedLocation";
-import { visitedLocations } from "./assets/data/data";
+import {
+  visitedLocations,
+  serviceCards1,
+  serviceCards2,
+} from "./assets/data/data";
 import ServiceSuggestions from "./src/components/ServiceSuggestions";
-import UberAuto from "./src/components/UberAuto";
 import ServiceBanners from "./src/components/ServiceBanners";
+import ServiceCards from "./src/components/ServiceCards";
 
 const Devider = () => {
   return (
@@ -40,9 +44,12 @@ export default function App() {
 
         <ServiceSuggestions />
 
-        <UberAuto />
+        <ServiceCards {...serviceCards1} />
 
         <ServiceBanners />
+
+        <ServiceCards {...serviceCards2} />
+
         <StatusBar style="auto" />
       </SafeAreaView>
     </ScrollView>
