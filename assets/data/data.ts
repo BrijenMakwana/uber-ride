@@ -3,6 +3,7 @@ import {
   ServiceItemProps,
   ServiceCardsProps,
   ServiceBannerProps,
+  PickupRuleProps,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -141,10 +142,29 @@ const serviceBanners: ServiceBannerProps[] = [
   },
 ];
 
+const pickupRules: PickupRuleProps[] = [
+  {
+    id: "1",
+    iconName: "calendar",
+    rule: "Choose your exact pickup time up to 90 days in advance",
+  },
+  {
+    id: "2",
+    iconName: "timer-sand",
+    rule: "Extra wait time included to meet your ride",
+  },
+  {
+    id: "3",
+    iconName: "close-box",
+    rule: "Extra wait time included to meet your ride",
+  },
+];
+
 export {
   visitedLocations,
   services,
   serviceCards1,
   serviceCards2,
   serviceBanners,
+  pickupRules,
 };

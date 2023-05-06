@@ -1,3 +1,9 @@
+import { Dispatch, SetStateAction } from "react";
+
+type SearchLocationProps = {
+  openPickupTimeModal: () => void;
+};
+
 type VisitedLocationProps = {
   id: string;
   location: string;
@@ -31,10 +37,29 @@ type ServiceBannerProps = {
   bannerImage: string;
 };
 
+type PickupTimeModalProps = {
+  pickupTimeModalIsOpen: boolean;
+  setPickupTimeModalIsOpen: Dispatch<SetStateAction<boolean>>;
+};
+
+type PickupRuleProps = {
+  id: string;
+  iconName: any;
+  rule: string;
+};
+
+type UIButtonProps = {
+  text: string;
+};
+
 export {
+  SearchLocationProps,
   VisitedLocationProps,
   ServiceItemProps,
   ServiceCardsProps,
   ServiceCardProps,
   ServiceBannerProps,
+  PickupRuleProps,
+  UIButtonProps,
+  PickupTimeModalProps,
 };

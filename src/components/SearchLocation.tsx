@@ -1,21 +1,26 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { Feather, AntDesign, Entypo } from "@expo/vector-icons";
-import React from "react";
+import React, { FC } from "react";
+import { SearchLocationProps } from "../types/types";
 
-const SearchLocation = () => {
+const SearchLocation: FC<SearchLocationProps> = (props) => {
+  const { openPickupTimeModal } = props;
   return (
     <View style={styles.container}>
       <Feather name="search" size={25} color="black" />
 
       <TextInput placeholder="Where to?" style={styles.locationInput} />
 
-      <View style={styles.pickupTimeContainer}>
+      <Pressable
+        style={styles.pickupTimeContainer}
+        onPress={openPickupTimeModal}
+      >
         <AntDesign name="clockcircle" size={20} color="black" />
 
         <Text style={styles.pickupTime}>now</Text>
 
         <Entypo name="chevron-down" size={24} color="black" />
-      </View>
+      </Pressable>
     </View>
   );
 };
