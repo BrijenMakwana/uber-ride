@@ -1,15 +1,27 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { Feather, AntDesign, Entypo } from "@expo/vector-icons";
 import React, { FC } from "react";
-import { SearchLocationProps } from "../types/types";
+import { SearchLocationProps, ScreenType } from "../types/types";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
 
 const SearchLocation: FC<SearchLocationProps> = (props) => {
   const { openPickupTimeModal } = props;
+  const navigation = useNavigation<NavigationProp<ScreenType>>();
+
+  const goToFindRideScreen = () => {
+    navigation.navigate("FindRide");
+  };
+
   return (
     <View style={styles.container}>
       <Feather name="search" size={25} color="black" />
 
-      <TextInput placeholder="Where to?" style={styles.locationInput} />
+      <Pressable
+        style={styles.locationTextContainer}
+        onPress={goToFindRideScreen}
+      >
+        <Text style={styles.locationText}>Where to?</Text>
+      </Pressable>
 
       <Pressable
         style={styles.pickupTimeContainer}
@@ -38,10 +50,11 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 30,
   },
-  locationInput: {
+  locationTextContainer: {
     flex: 1,
-    height: "100%",
     paddingLeft: 10,
+  },
+  locationText: {
     fontSize: 20,
   },
   pickupTimeContainer: {
