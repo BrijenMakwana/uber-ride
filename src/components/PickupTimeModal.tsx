@@ -9,8 +9,17 @@ import {
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { FC, Fragment, useState } from "react";
 import { pickupRules } from "../../assets/data/data";
-import { PickupRuleProps, PickupTimeModalProps } from "../types/types";
+import {
+  PickupRuleProps,
+  PickupTimeModalProps,
+  DateTimePickerMode,
+} from "../types/types";
 import UIButton from "./UIComponents/UIButton";
+import {
+  DateTimePickerAndroid,
+  DateTimePickerEvent,
+} from "@react-native-community/datetimepicker";
+import moment from "moment";
 
 const PickUpRule: FC<PickupRuleProps> = (props) => {
   const { iconName, rule } = props;
@@ -24,6 +33,8 @@ const PickUpRule: FC<PickupRuleProps> = (props) => {
 
 const PickupTimeModal: FC<PickupTimeModalProps> = (props) => {
   const [matchNewDriver, setMatchNewDriver] = useState<boolean>(true);
+  const [pickupDate, setPickupDate] = useState<Date>(new Date());
+
   const { pickupTimeModalIsOpen, setPickupTimeModalIsOpen } = props;
 
   const toggleMatchNewDriver = () => {
@@ -32,6 +43,27 @@ const PickupTimeModal: FC<PickupTimeModalProps> = (props) => {
 
   const closeThisModal = () => {
     setPickupTimeModalIsOpen(false);
+  };
+
+  const changeDateAndTime = (event: DateTimePickerEvent, selectedDate: any) => {
+    setPickupDate(selectedDate);
+  };
+
+  const showMode = (currentMode: DateTimePickerMode) => {
+    DateTimePickerAndroid.open({
+      value: pickupDate,
+      onChange: changeDateAndTime,
+      mode: currentMode,
+      is24Hour: false,
+    });
+  };
+
+  const showDatepicker = () => {
+    showMode("date");
+  };
+
+  const showTimepicker = () => {
+    showMode("time");
   };
 
   return (
@@ -44,9 +76,19 @@ const PickupTimeModal: FC<PickupTimeModalProps> = (props) => {
         <Text style={styles.heading}>When do you want to be picked up?</Text>
 
         <View style={styles.dateTimeContainer}>
-          <Text style={styles.dateTimeText}>Sat, May 6</Text>
+          <Pressable onPress={showDatepicker} style={styles.dateContainer}>
+            <Text style={styles.dateTimeText}>
+              {moment(pickupDate).format("ddd, MMM D")}
+            </Text>
+          </Pressable>
+
           <View style={styles.devider} />
-          <Text style={styles.dateTimeText}>10:40 AM</Text>
+
+          <Pressable onPress={showTimepicker} style={styles.timeContainer}>
+            <Text style={styles.dateTimeText}>
+              {moment(pickupDate).format("LT")}
+            </Text>
+          </Pressable>
         </View>
 
         <View style={styles.checkBoxContainer}>
@@ -109,7 +151,19 @@ const styles = StyleSheet.create({
   dateTimeContainer: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 50,
+    marginTop: 40,
+  },
+  dateContainer: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
+  },
+  timeContainer: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
   },
   dateTimeText: {
     fontSize: 18,
@@ -119,7 +173,7 @@ const styles = StyleSheet.create({
     height: 1.5,
     backgroundColor: "rgb(238,238,238)",
     width: "82%",
-    marginVertical: 25,
+    marginVertical: 10,
     alignSelf: "center",
   },
   checkBoxContainer: {

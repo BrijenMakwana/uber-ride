@@ -48,6 +48,8 @@ type PickupRuleProps = {
   rule: string;
 };
 
+type DateTimePickerMode = "date" | "time";
+
 type UIButtonProps = {
   text: string;
 };
@@ -62,4 +64,5 @@ export {
   PickupRuleProps,
   UIButtonProps,
   PickupTimeModalProps,
+  DateTimePickerMode,
 };
