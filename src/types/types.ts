@@ -1,5 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 
+type ScreenType = {
+  Home: undefined;
+  FindRide: undefined;
+};
+
 type SearchLocationProps = {
   openPickupTimeModal: () => void;
 };
@@ -54,7 +59,12 @@ type UIButtonProps = {
   text: string;
 };
 
+type UIInputProps = {
+  placeholderText: string;
+};
+
 export {
+  ScreenType,
   SearchLocationProps,
   VisitedLocationProps,
   ServiceItemProps,
@@ -65,4 +75,5 @@ export {
   UIButtonProps,
   PickupTimeModalProps,
   DateTimePickerMode,
+  UIInputProps,
 };
