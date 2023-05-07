@@ -156,7 +156,7 @@ const pickupRules: PickupRuleProps[] = [
   {
     id: "3",
     iconName: "close-box",
-    rule: "Extra wait time included to meet your ride",
+    rule: "Cancel at no charge up to 60 minutes in advance",
   },
 ];
 
