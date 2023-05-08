@@ -57,6 +57,7 @@ type DateTimePickerMode = "date" | "time";
 
 type UIButtonProps = {
   text: string;
+  onPress: () => void;
 };
 
 type UIInputProps = {
@@ -94,6 +95,10 @@ type CarOptionProps = {
   setSelectedCar: Dispatch<SetStateAction<string>>;
 };
 
+type UIBackButtonProps = {
+  onPress: () => void;
+};
+
 export {
   ScreenType,
   SearchLocationProps,
@@ -111,4 +116,5 @@ export {
   Location,
   Car,
   CarOptionProps,
+  UIBackButtonProps,
 };

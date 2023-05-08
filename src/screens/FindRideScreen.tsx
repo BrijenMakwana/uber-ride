@@ -7,6 +7,8 @@ import UIButton from "../components/UIComponents/UIButton";
 import UICurrentLocation from "../components/UIComponents/UICurrentLocation";
 import { Location, Locations } from "../types/types";
 import SelectCar from "../components/SelectCar";
+import UIBackButton from "../components/UIComponents/UIBackButton";
+import { useNavigation } from "@react-navigation/native";
 
 const initialRegion = {
   latitude: 12.9716,
@@ -17,14 +19,27 @@ const initialRegion = {
 
 const FindRideScreen = () => {
   const [mapRegion, setMapRegion] = useState<Location>(initialRegion);
+  const [selectCarIsVisible, setSelectCarIsVisible] = useState<boolean>(false);
+
+  const navigation = useNavigation();
+
+  const goToPreviousScreen = () => {
+    navigation.goBack();
+  };
 
   const changeMapRegion = (region: Location) => {
     setMapRegion(region);
   };
 
+  const showSelectCarOptions = () => {
+    setSelectCarIsVisible(true);
+  };
+
   return (
     <View style={styles.container}>
-      <LocationInput />
+      {!selectCarIsVisible && <LocationInput />}
+
+      {selectCarIsVisible && <UIBackButton onPress={goToPreviousScreen} />}
 
       <View style={styles.mapContainer}>
         <MapView
@@ -46,10 +61,10 @@ const FindRideScreen = () => {
         <UICurrentLocation />
 
         <View style={styles.doneBtnContainer}>
-          <UIButton text="Done" />
+          <UIButton text="Done" onPress={showSelectCarOptions} />
         </View>
 
-        <SelectCar />
+        {selectCarIsVisible && <SelectCar />}
       </View>
     </View>
   );
