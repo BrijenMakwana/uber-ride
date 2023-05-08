@@ -20,12 +20,13 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 20,
-    borderRadius: 10,
+    paddingVertical: 17,
+    borderRadius: 3,
   },
   text: {
     color: "#fff",
     fontSize: 16,
     fontWeight: "500",
+    textTransform: "capitalize",
   },
 });
