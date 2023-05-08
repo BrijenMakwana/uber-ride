@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import LocationInput from "../components/LocationInput";
 import MapView, { Marker } from "react-native-maps";
 import { mapStyle, indianPlaces } from "../../assets/data/data";
 import UIButton from "../components/UIComponents/UIButton";
 import UICurrentLocation from "../components/UIComponents/UICurrentLocation";
-import { Location } from "../types/types";
+import { Location, Locations } from "../types/types";
 
 const initialRegion = {
   latitude: 12.9716,
@@ -15,6 +15,12 @@ const initialRegion = {
 };
 
 const FindRideScreen = () => {
+  const [mapRegion, setMapRegion] = useState<Location>(initialRegion);
+
+  const changeMapRegion = (region: Location) => {
+    setMapRegion(region);
+  };
+
   return (
     <View style={styles.container}>
       <LocationInput />
@@ -22,11 +28,12 @@ const FindRideScreen = () => {
       <View style={styles.mapContainer}>
         <MapView
           style={styles.map}
-          initialRegion={initialRegion}
+          initialRegion={mapRegion}
           provider="google"
           customMapStyle={mapStyle}
+          onRegionChange={changeMapRegion}
         >
-          {indianPlaces.map((place: Location) => (
+          {indianPlaces.map((place: Locations) => (
             <Marker
               coordinate={place.coordinates}
               key={place.id}

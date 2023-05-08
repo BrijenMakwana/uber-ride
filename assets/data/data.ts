@@ -4,7 +4,7 @@ import {
   ServiceCardsProps,
   ServiceBannerProps,
   PickupRuleProps,
-  Location,
+  Locations,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -242,7 +242,7 @@ const mapStyle = [
   },
 ];
 
-const indianPlaces: Location[] = [
+const indianPlaces: Locations[] = [
   {
     id: 1,
     coordinates: {
