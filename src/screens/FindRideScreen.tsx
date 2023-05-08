@@ -2,9 +2,10 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import LocationInput from "../components/LocationInput";
 import MapView, { Marker } from "react-native-maps";
-import { mapStyle } from "../../assets/data/data";
+import { mapStyle, indianPlaces } from "../../assets/data/data";
 import UIButton from "../components/UIComponents/UIButton";
 import UICurrentLocation from "../components/UIComponents/UICurrentLocation";
+import { Location } from "../types/types";
 
 const initialRegion = {
   latitude: 12.9716,
@@ -17,6 +18,7 @@ const FindRideScreen = () => {
   return (
     <View style={styles.container}>
       <LocationInput />
+
       <View style={styles.mapContainer}>
         <MapView
           style={styles.map}
@@ -24,10 +26,13 @@ const FindRideScreen = () => {
           provider="google"
           customMapStyle={mapStyle}
         >
-          <Marker
-            coordinate={initialRegion}
-            image={require("../../assets/images/pin.png")}
-          />
+          {indianPlaces.map((place: Location) => (
+            <Marker
+              coordinate={place.coordinates}
+              key={place.id}
+              image={require("../../assets/images/taxi.png")}
+            />
+          ))}
         </MapView>
 
         <UICurrentLocation />

@@ -4,6 +4,7 @@ import {
   ServiceCardsProps,
   ServiceBannerProps,
   PickupRuleProps,
+  Location,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -241,6 +242,126 @@ const mapStyle = [
   },
 ];
 
+const indianPlaces: Location[] = [
+  {
+    id: 1,
+    coordinates: {
+      latitude: 28.6139,
+      longitude: 77.209,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 2,
+    coordinates: {
+      latitude: 18.5204,
+      longitude: 73.8567,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 3,
+    coordinates: {
+      latitude: 26.9124,
+      longitude: 75.7873,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 4,
+    coordinates: {
+      latitude: 19.076,
+      longitude: 72.8777,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 5,
+    coordinates: {
+      latitude: 12.9716,
+      longitude: 77.5946,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 6,
+    coordinates: {
+      latitude: 22.5726,
+      longitude: 88.3639,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 7,
+    coordinates: {
+      latitude: 23.2599,
+      longitude: 77.4126,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 8,
+    coordinates: {
+      latitude: 27.175,
+      longitude: 78.0422,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 9,
+    coordinates: {
+      latitude: 26.8467,
+      longitude: 80.9462,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 10,
+    coordinates: {
+      latitude: 26.2006,
+      longitude: 92.9376,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 11,
+    coordinates: {
+      latitude: 17.385,
+      longitude: 78.4867,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 12,
+    coordinates: {
+      latitude: 21.1458,
+      longitude: 79.0882,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 13,
+    coordinates: {
+      latitude: 25.5941,
+      longitude: 85.1376,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+];
+
 export {
   visitedLocations,
   services,
@@ -249,4 +370,5 @@ export {
   serviceBanners,
   pickupRules,
   mapStyle,
+  indianPlaces,
 };

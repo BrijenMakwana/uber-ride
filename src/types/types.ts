@@ -63,6 +63,16 @@ type UIInputProps = {
   placeholderText: string;
 };
 
+type Location = {
+  id: number;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+    latitudeDelta: number;
+    longitudeDelta: number;
+  };
+};
+
 export {
   ScreenType,
   SearchLocationProps,
@@ -76,4 +86,5 @@ export {
   PickupTimeModalProps,
   DateTimePickerMode,
   UIInputProps,
+  Location,
 };
