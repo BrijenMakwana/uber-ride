@@ -75,6 +75,25 @@ type Location = {
   longitudeDelta: number;
 };
 
+type Car = {
+  id: string;
+  carImage: string;
+  carType: string;
+  arrivingTime: string;
+  minAway: number;
+  fair: number;
+};
+
+type CarOptionProps = {
+  carImage: string;
+  carType: string;
+  arrivingTime: string;
+  minAway: number;
+  fair: number;
+  selectedCar: string;
+  setSelectedCar: Dispatch<SetStateAction<string>>;
+};
+
 export {
   ScreenType,
   SearchLocationProps,
@@ -90,4 +109,6 @@ export {
   UIInputProps,
   Locations,
   Location,
+  Car,
+  CarOptionProps,
 };

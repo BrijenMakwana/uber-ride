@@ -5,6 +5,7 @@ import {
   ServiceBannerProps,
   PickupRuleProps,
   Locations,
+  Car,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -362,6 +363,27 @@ const indianPlaces: Locations[] = [
   },
 ];
 
+const cars: Car[] = [
+  {
+    id: "1",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    carType: "sedan intercity",
+    arrivingTime: "3:57pm",
+    minAway: 8,
+    fair: 302.41,
+  },
+  {
+    id: "2",
+    carImage:
+      "https://cdn.pixabay.com/photo/2020/07/09/09/37/triumph-spitfire-5386572_960_720.png",
+    carType: "go intercity",
+    arrivingTime: "4:05pm",
+    minAway: 10,
+    fair: 208.41,
+  },
+];
+
 export {
   visitedLocations,
   services,
@@ -371,4 +393,5 @@ export {
   pickupRules,
   mapStyle,
   indianPlaces,
+  cars,
 };

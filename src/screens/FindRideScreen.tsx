@@ -6,6 +6,7 @@ import { mapStyle, indianPlaces } from "../../assets/data/data";
 import UIButton from "../components/UIComponents/UIButton";
 import UICurrentLocation from "../components/UIComponents/UICurrentLocation";
 import { Location, Locations } from "../types/types";
+import SelectCar from "../components/SelectCar";
 
 const initialRegion = {
   latitude: 12.9716,
@@ -47,6 +48,8 @@ const FindRideScreen = () => {
         <View style={styles.doneBtnContainer}>
           <UIButton text="Done" />
         </View>
+
+        <SelectCar />
       </View>
     </View>
   );
