@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CarOption from "./CarOption";
 import { cars } from "../../assets/data/data";
 import UIButton from "./UIComponents/UIButton";
+import SelectPayment from "./SelectPayment";
 
 const SelectCar = () => {
   const [selectedCar, setSelectedCar] = useState<string>("sedan intercity");
@@ -24,8 +25,10 @@ const SelectCar = () => {
         />
       ))}
 
+      <SelectPayment />
+
       <View style={styles.bookCarBtnContainer}>
-        <UIButton text={bookBtnText} />
+        <UIButton text={bookBtnText} onPress={() => undefined} />
       </View>
     </View>
   );
