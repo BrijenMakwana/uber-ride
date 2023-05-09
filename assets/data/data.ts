@@ -361,6 +361,132 @@ const indianPlaces: Locations[] = [
       longitudeDelta: 0.05,
     },
   },
+  {
+    id: 14,
+    coordinates: {
+      latitude: 12.9716,
+      longitude: 77.5946,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 15,
+    coordinates: {
+      latitude: 28.7041,
+      longitude: 77.1025,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 16,
+    coordinates: {
+      latitude: 19.076,
+      longitude: 72.8777,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 17,
+    coordinates: {
+      latitude: 13.0827,
+      longitude: 80.2707,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 18,
+    coordinates: {
+      latitude: 22.5726,
+      longitude: 88.3639,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 19,
+    coordinates: {
+      latitude: 26.9124,
+      longitude: 75.7873,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 20,
+    coordinates: {
+      latitude: 11.0168,
+      longitude: 76.9558,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 21,
+    coordinates: {
+      latitude: 15.2993,
+      longitude: 74.124,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 22,
+    coordinates: {
+      latitude: 25.5941,
+      longitude: 85.1376,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 23,
+    coordinates: {
+      latitude: 17.385,
+      longitude: 78.4867,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 24,
+    coordinates: {
+      latitude: 22.2587,
+      longitude: 71.1924,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 25,
+    coordinates: {
+      latitude: 19.9975,
+      longitude: 73.7898,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 26,
+    coordinates: {
+      latitude: 12.2958,
+      longitude: 76.6394,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
+  {
+    id: 27,
+    coordinates: {
+      latitude: 28.6139,
+      longitude: 77.209,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05,
+    },
+  },
 ];
 
 const cars: Car[] = [

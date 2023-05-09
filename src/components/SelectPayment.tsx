@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: "rgb(238,238,238)",
     height: 40,
+    width: 70,
   },
   iconContainer: {
     backgroundColor: "rgb(238,238,238)",
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     flex: 1,
-    paddingLeft: 15,
+    paddingLeft: 16,
   },
   accountType: {
     fontSize: 13,
