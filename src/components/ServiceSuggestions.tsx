@@ -1,14 +1,24 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
 import React from "react";
 import ServiceItem from "./ServiceItem";
 import { services } from "../../assets/data/data";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { BottomTabType } from "../types/types";
 
 const ServiceSuggestions = () => {
+  const navigation = useNavigation<NavigationProp<BottomTabType>>();
+
+  const goToServicesTab = () => {
+    navigation.navigate("ServicesTab");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.heading}>Suggestions</Text>
-        <Text style={styles.seeAll}>see all</Text>
+        <Pressable onPress={goToServicesTab}>
+          <Text style={styles.seeAll}>see all</Text>
+        </Pressable>
       </View>
 
       <View style={styles.services}>

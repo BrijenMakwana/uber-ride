@@ -5,6 +5,13 @@ type ScreenType = {
   FindRide: undefined;
 };
 
+type BottomTabType = {
+  HomeTab: undefined;
+  ServicesTab: undefined;
+  ActivityTab: undefined;
+  AccountTab: undefined;
+};
+
 type SearchLocationProps = {
   openPickupTimeModal: () => void;
 };
@@ -101,6 +108,7 @@ type UIBackButtonProps = {
 
 export {
   ScreenType,
+  BottomTabType,
   SearchLocationProps,
   VisitedLocationProps,
   ServiceItemProps,
