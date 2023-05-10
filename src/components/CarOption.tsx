@@ -2,8 +2,6 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import React, { FC } from "react";
 import { CarOptionProps } from "../types/types";
-import UIButton from "./UIComponents/UIButton";
-import UIInput from "./UIComponents/UIInput";
 
 const CarOption: FC<CarOptionProps> = (props) => {
   const {
@@ -59,7 +57,6 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 15,
     paddingVertical: 5,
-    backgroundColor: "rgb(238,238,238)",
   },
   carImage: {
     width: 70,
