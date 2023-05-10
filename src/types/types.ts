@@ -127,6 +127,21 @@ type PastTrip = {
   fair: number;
 };
 
+type MenuBox = {
+  id: string;
+  iconName: any;
+  menuName: string;
+};
+
+type MenuBoxProps = {
+  iconName: any;
+  menuName: string;
+};
+
+type MenuWithIcons = MenuBox;
+
+type MenuWithIconProps = MenuBoxProps;
+
 export {
   ScreenType,
   BottomTabType,
@@ -149,4 +164,8 @@ export {
   UITabHeadingProps,
   PastTripProps,
   PastTrip,
+  MenuBox,
+  MenuBoxProps,
+  MenuWithIcons,
+  MenuWithIconProps,
 };
