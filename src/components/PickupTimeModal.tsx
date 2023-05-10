@@ -122,7 +122,7 @@ const PickupTimeModal: FC<PickupTimeModalProps> = (props) => {
         </View>
 
         <View style={{ marginTop: "auto", marginBottom: 20 }}>
-          <UIButton text="Set pickup time" />
+          <UIButton text="Set pickup time" onPress={() => undefined} />
         </View>
       </SafeAreaView>
     </Modal>

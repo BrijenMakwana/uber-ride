@@ -106,6 +106,27 @@ type UIBackButtonProps = {
   onPress: () => void;
 };
 
+type UITabHeadingProps = {
+  text: string;
+};
+
+type PastTripProps = {
+  carImage: string;
+  location: string;
+  bookingDate: string;
+  bookingTime: string;
+  fair: number;
+};
+
+type PastTrip = {
+  id: string;
+  carImage: string;
+  location: string;
+  bookingDate: string;
+  bookingTime: string;
+  fair: number;
+};
+
 export {
   ScreenType,
   BottomTabType,
@@ -125,4 +146,7 @@ export {
   Car,
   CarOptionProps,
   UIBackButtonProps,
+  UITabHeadingProps,
+  PastTripProps,
+  PastTrip,
 };

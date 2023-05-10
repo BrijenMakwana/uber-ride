@@ -6,6 +6,7 @@ import {
   PickupRuleProps,
   Locations,
   Car,
+  PastTrip,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -510,6 +511,81 @@ const cars: Car[] = [
   },
 ];
 
+const pastTrips: PastTrip[] = [
+  {
+    id: "1",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Sardar Vallabhbhai Patel International Airport",
+    bookingDate: "2022-09-08T08:02:17-05:00",
+    bookingTime: "2022-09-08T08:02:17-05:00",
+    fair: 358.86,
+  },
+  {
+    id: "2",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Excellence Hair TRansplant & Laboretry",
+    bookingDate: "2022-11-08T08:02:17-05:00",
+    bookingTime: "2022-11-08T08:02:17-05:00",
+    fair: 400,
+  },
+  {
+    id: "3",
+    carImage:
+      "https://cdn.pixabay.com/photo/2020/07/09/09/37/triumph-spitfire-5386572_960_720.png",
+    location: "Terminal 3",
+    bookingDate: "2022-09-08T08:02:17-05:00",
+    bookingTime: "2022-09-08T08:02:17-05:00",
+    fair: 270.76,
+  },
+  {
+    id: "4",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Lohia Hostels",
+    bookingDate: "2022-12-08T08:02:17-05:00",
+    bookingTime: "2012-12-08T08:02:17-05:00",
+    fair: 870,
+  },
+  {
+    id: "5",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Sardar Vallabhbhai Patel International Airport",
+    bookingDate: "2022-09-08T08:02:17-05:00",
+    bookingTime: "2022-09-08T08:02:17-05:00",
+    fair: 358.86,
+  },
+  {
+    id: "6",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Excellence Hair TRansplant & Laboretry",
+    bookingDate: "2022-11-08T08:02:17-05:00",
+    bookingTime: "2022-11-08T08:02:17-05:00",
+    fair: 400,
+  },
+  {
+    id: "7",
+    carImage:
+      "https://cdn.pixabay.com/photo/2020/07/09/09/37/triumph-spitfire-5386572_960_720.png",
+    location: "Terminal 3",
+    bookingDate: "2022-09-08T08:02:17-05:00",
+    bookingTime: "2022-09-08T08:02:17-05:00",
+    fair: 270.76,
+  },
+  {
+    id: "8",
+    carImage:
+      "https://cdn.pixabay.com/photo/2012/04/13/20/37/car-33556_960_720.png",
+    location: "Lohia Hostels",
+    bookingDate: "2022-12-08T08:02:17-05:00",
+    bookingTime: "2012-12-08T08:02:17-05:00",
+    fair: 870,
+  },
+];
+
 export {
   visitedLocations,
   services,
@@ -520,4 +596,5 @@ export {
   mapStyle,
   indianPlaces,
   cars,
+  pastTrips,
 };
