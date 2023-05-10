@@ -7,6 +7,8 @@ import {
   Locations,
   Car,
   PastTrip,
+  MenuBox,
+  MenuWithIcons,
 } from "../../src/types/types";
 
 const visitedLocations: VisitedLocationProps[] = [
@@ -586,6 +588,57 @@ const pastTrips: PastTrip[] = [
   },
 ];
 
+const menuBoxes: MenuBox[] = [
+  {
+    id: "1",
+    iconName: "help-buoy",
+    menuName: "help",
+  },
+  {
+    id: "2",
+    iconName: "wallet-sharp",
+    menuName: "wallet",
+  },
+  {
+    id: "3",
+    iconName: "time",
+    menuName: "trips",
+  },
+];
+
+const menuWithIcons: MenuWithIcons[] = [
+  {
+    id: "1",
+    iconName: "envelope",
+    menuName: "Messages",
+  },
+  {
+    id: "2",
+    iconName: "shopping-bag",
+    menuName: "Business hub",
+  },
+  {
+    id: "3",
+    iconName: "gift",
+    menuName: "Send a gift",
+  },
+  {
+    id: "4",
+    iconName: "sun-o",
+    menuName: "Settings",
+  },
+  {
+    id: "5",
+    iconName: "user",
+    menuName: "Earn by driving or delivering",
+  },
+  {
+    id: "6",
+    iconName: "info-circle",
+    menuName: "Legal",
+  },
+];
+
 export {
   visitedLocations,
   services,
@@ -597,4 +650,6 @@ export {
   indianPlaces,
   cars,
   pastTrips,
+  menuBoxes,
+  menuWithIcons,
 };

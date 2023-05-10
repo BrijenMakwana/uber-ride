@@ -10,7 +10,7 @@ import SelectCar from "../components/SelectCar";
 import UIBackButton from "../components/UIComponents/UIBackButton";
 import { useNavigation } from "@react-navigation/native";
 
-const initialRegion = {
+const initialRegion: Location = {
   latitude: 12.9716,
   longitude: 77.5946,
   latitudeDelta: 0.0922,
