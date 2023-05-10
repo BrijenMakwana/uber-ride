@@ -106,6 +106,10 @@ type UIBackButtonProps = {
   onPress: () => void;
 };
 
+type UITabHeadingProps = {
+  text: string;
+};
+
 export {
   ScreenType,
   BottomTabType,
@@ -125,4 +129,5 @@ export {
   Car,
   CarOptionProps,
   UIBackButtonProps,
+  UITabHeadingProps,
 };

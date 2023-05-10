@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
   promoContainer: {
     backgroundColor: "rgb(9,136,77)",
     borderRadius: 15,
-    paddingVertical: 3,
+    paddingVertical: 1,
     paddingHorizontal: 9,
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
-    top: -12,
+    top: -10,
     zIndex: 2,
   },
   promoText: {
