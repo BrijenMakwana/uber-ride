@@ -1,6 +1,6 @@
 <img src="./assets/icon.png" width="200" height="200"/>
 
-# Uber App Clone (Taxi Bookng App)
+# Uber App Clone (Taxi Booking App)
 
 ## Table of contents
 
@@ -14,20 +14,20 @@
 ## Screenshots
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-  <img src="./assets/images/Screenshots/preview_1.png" alt="Screenshot 1" width="250">
-  <img src="./assets/images/Screenshots/preview_2.png" alt="Screenshot 2" width="250">
-  <img src="./assets/images/Screenshots/preview_3.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_4.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_5.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_6.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_7.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_8.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_9.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_10.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_11.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_12.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_13.png" alt="Screenshot 3" width="250">
-  <img src="./assets/images/Screenshots/preview_14.png" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_1.jpg" alt="Screenshot 1" width="250">
+  <img src="./assets/images/Screenshots/preview_2.jpg" alt="Screenshot 2" width="250">
+  <img src="./assets/images/Screenshots/preview_3.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_4.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_5.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_6.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_7.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_8.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_9.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_10.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_11.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_12.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_13.jpg" alt="Screenshot 3" width="250">
+  <img src="./assets/images/Screenshots/preview_14.jpg" alt="Screenshot 3" width="250">
 
 </div>
 
