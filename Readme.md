@@ -6,8 +6,8 @@
 
 - [Overview](#overview)
 - [Screenshots](#screenshots)
-- [Run the project](#Run-the-project)
-- [Built with](#Built-with)
+- [Run the project](#run-the-project)
+- [Built with](#built-with)
 
 ## Overview
 
